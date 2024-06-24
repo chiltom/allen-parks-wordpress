@@ -1,0 +1,8 @@
+---
+# handlers file for wordpress
+- name: restart apache
+  hosts: all
+  become: yes
+  service:
+    name: 'apache2'
+    state: restarted

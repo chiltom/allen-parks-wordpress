@@ -1,0 +1,4 @@
+# Ignore ansible files that involve sensitive information
+./roles/mysql/defaults/main.yml
+.terraform
+variables.tf

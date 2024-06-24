@@ -1,0 +1,27 @@
+---
+# tasks file for server
+- name: Update and install OS packages
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  tasks:
+    - name: Update OS packages
+      apt:
+        update_cache: yes
+        cache_valid_time: 3600
+
+    - name:
+      apt:
+        name:
+          [
+            "apache2",
+            "python3-dev",
+            "python3-pip",
+            "mysql-server",
+            "php-mysql",
+            "php",
+            "libapache2-mod-php",
+            "python3-mysqldb",
+          ]
+        state: present
